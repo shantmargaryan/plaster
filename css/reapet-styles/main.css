@@ -55,7 +55,7 @@
 	transition: color 0.3s, background-color 0.3s;
 }
 
-.main__calculator>button:hover {
+.main__calculator>button:active {
 	background-color: #254152;
 	color: #fff;
 }
