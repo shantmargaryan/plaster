@@ -374,8 +374,8 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom,
 .swiper-pagination-fraction {
-    bottom: var(--swiper-pagination-bottom, -25px);
-    top: var(--swiper-pagination-top, auto);
+    top: auto;
+    bottom: -20px;
     left: 0;
     width: 100%
 }
