@@ -20,8 +20,8 @@
 .hero__title {
     max-width: 750px;
 }
-s
-.hero__text {
+
+s .hero__text {
     max-width: 550px;
 }
 
@@ -44,9 +44,8 @@ s
 }
 
 .number__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
@@ -87,8 +86,9 @@ s
 }
 
 .advantages__list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
     gap: 40px;
 }
 
@@ -321,12 +321,8 @@ s
 }
 
 .tabs__img {
-    width: 580px;
+    max-width: 580px;
     height: 300px;
-
-    @media(max-width:575px) {
-        width: 320px;
-    }
 }
 
 .tabs__list {
@@ -492,6 +488,7 @@ s
     counter-reset: number;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
     column-gap: 40px;
     row-gap: 80px;
     margin-bottom: 80px;
@@ -775,7 +772,8 @@ s
     font-weight: 600;
 }
 
-.calculator__input {}
+.calculator__input {
+}
 
 .calculator__input[type="range"] {
     width: 70%;
