@@ -1,0 +1,71 @@
+/* consultation start */
+
+.consultation {
+    padding: 7% 0;
+    background-color: #E7F2F9;
+}
+
+.consultation__container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.consultation__content {}
+
+.consultation__title {}
+
+.consultation__text {
+    max-width: 450px;
+}
+
+.consultation__form {}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input {
+    max-width: 350px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgba(37, 65, 82, 0.2);
+}
+
+.form__input:nth-child(2) {
+    margin-bottom: 40px;
+}
+
+.form__btn {
+    align-self: start;
+    margin-bottom: 20px;
+}
+
+.form__text {
+    color: #254152;
+}
+
+.form__subtext {
+    color: #254152A6;
+}
+
+@media(min-width:768px) {
+    .consultation__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .form {
+        width: 50%;
+    }
+
+    .form__input {
+        max-width: 450px;
+        width: 100%;
+    }
+}
+
+/* consultation end */
