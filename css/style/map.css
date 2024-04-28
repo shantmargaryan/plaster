@@ -1,0 +1,17 @@
+.map {}
+
+.map__container {}
+
+.map__content {}
+
+.container {}
+
+.map__title {}
+
+.map__text {
+    max-width: 550px;
+}
+
+.map__map {
+    display: block;
+}

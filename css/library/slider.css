@@ -621,7 +621,7 @@ button.swiper-pagination-bullet {
     top: 0;
     pointer-events: none;
     opacity: 0;
-    z-index: -1000
+    z-index: -1000;
 }
 
 .swiper-free-mode>.swiper-wrapper {

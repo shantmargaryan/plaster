@@ -1,0 +1,44 @@
+/* gallery start */
+
+.gallery {
+    position: relative;
+}
+
+.gallery__container {}
+
+.gallery__content {}
+
+.gallery__title {}
+
+.gallery__text {
+    max-width: 650px;
+}
+
+.gallery__swiper {}
+
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.gallery__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery__item {
+    height: 100%;
+}
+
+.gallery__img {}
+
+.gallery__box {
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgb(231, 242, 249);
+}
+
+.swiper-pagination {}
+
+/* gallery end */

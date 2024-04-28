@@ -72,6 +72,28 @@ let materialsSwiper = new Swiper(".materials__swiper", {
     keyboard: true,
 });
 
+let swiper = new Swiper(".gallery__swiper", {
+    spaceBetween: 20,
+    breakpoints: {
+        600: {
+            slidesPerView: 2,
+        },
+        768: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 4,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            },
+        },
+    },
+});
+
 
 new Tabs('tab1', {
     firstTabActive: true,
