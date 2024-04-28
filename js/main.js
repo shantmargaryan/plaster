@@ -35,73 +35,73 @@ mediaQueryMinWidth_992.addEventListener("change", (e) => {
     }
 });
 
-let heroSwiper = new Swiper(".hero__swiper", {
-    pagination: {
-        clickable: true,
-        el: ".swiper-pagination",
-    },
-    autoplay: {
-        delay: 3000,
-    },
-    mousewheel: true,
-});
-
-let materialsSwiper = new Swiper(".materials__swiper", {
-    cssMode: true,
-    spaceBetween: 20,
-    breakpoints: {
-        600: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 3,
-        },
-        992: {
-            slidesPerView: 4,
-        },
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-        clickable: true,
-        el: ".swiper-pagination",
-    },
-    mousewheel: true,
-    keyboard: true,
-});
-
-let swiper = new Swiper(".gallery__swiper", {
-    spaceBetween: 20,
-    breakpoints: {
-        600: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 3,
-        },
-        992: {
-            slidesPerView: 4,
-        },
+if (document.querySelector(".hero__swiper") || document.querySelector(".materials__swiper") || document.querySelector(".gallery__swiper")) {
+    let heroSwiper = new Swiper(".hero__swiper", {
         pagination: {
-            el: ".swiper-pagination",
             clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '">' + (index + 1) + "</span>";
+            el: ".swiper-pagination",
+        },
+        autoplay: {
+            delay: 3000,
+        },
+        mousewheel: true,
+    });
+    let materialsSwiper = new Swiper(".materials__swiper", {
+        cssMode: true,
+        spaceBetween: 20,
+        breakpoints: {
+            600: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
             },
         },
-    },
-});
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            clickable: true,
+            el: ".swiper-pagination",
+        },
+        mousewheel: true,
+        keyboard: true,
+    });
+    let gallerySwiper = new Swiper(".gallery__swiper", {
+        spaceBetween: 20,
+        breakpoints: {
+            600: {
+                slidesPerView: 2,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + "</span>";
+                },
+            },
+        },
+    });
+}
 
-
-new Tabs('tab1', {
-    firstTabActive: true,
-    isChanged(tabs) {
-        console.log(tabs);
-    },
-})
-
+if (document.querySelector(".tabs")) {
+    new Tabs('tab1', {
+        firstTabActive: true,
+        isChanged(tabs) {
+            console.log(tabs);
+        },
+    })
+}
 
 const inputRange = document.querySelectorAll(".calculator__input")
 const merter = document.querySelectorAll(".calculator__meter");
