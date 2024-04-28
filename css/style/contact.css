@@ -1,0 +1,103 @@
+.contact {}
+
+.contact__container {}
+
+.contact__content {}
+
+.contact__title {}
+
+.contact__text {
+    max-width: 450px;
+}
+
+.contact__wrapper {}
+
+.contact__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact__time {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: fit-content;
+}
+
+.contact__icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 45px;
+    fill: transparent;
+}
+
+.contact__icon_reapet {
+    fill: #2CA6DE;
+}
+
+.contact__time-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__time-subtitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact__time-text {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact__list {
+    margin-bottom: 6%;
+}
+
+.contact__item {}
+
+.contact__item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+
+.contact__link {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #254152;
+}
+
+.contact__location {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact__address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact__map {
+    display: block;
+}
+
+@media(min-width:768px) {
+    .contact__box {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
