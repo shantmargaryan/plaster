@@ -4,6 +4,10 @@ const burger = document.querySelector(".burger");
 const calc = document.querySelector(".main__calculator");
 const calcBtn = document.querySelector(".nav__Calculator");
 const overlay = document.querySelector(".main__overlay");
+const sendForm = document.querySelector(".main__form");
+const formInput = document.querySelector(".main__input");
+const requestBtn = document.querySelector(".header__btn");
+const requestCall = document.querySelector(".main__request-call");
 
 
 document.addEventListener("click", (e) => {
@@ -13,8 +17,17 @@ document.addEventListener("click", (e) => {
     } else if (e.target.closest(".main__overlay")) {
         calc.classList.remove("main__calculator_active");
         overlay.classList.remove("main__overlay_active");
+
+    }
+    if (e.target.closest(".header__btn")) {
+        requestCall.classList.add("main__request-call_active");
+        overlay.classList.add("main__overlay_active");
+    } else if (e.target.closest(".main__overlay")) {
+        requestCall.classList.remove("main__request-call_active");
+        overlay.classList.remove("main__overlay_active");
     }
 })
+
 
 function menu() {
     let nav = document.querySelector(".nav");
@@ -103,7 +116,9 @@ if (document.querySelector(".tabs")) {
         },
     })
 }
-
+const priceText = document.querySelector("[data-price-text]");
+const price = document.querySelectorAll("[data-price]");
+const chackbox = document.querySelectorAll(".calculator__checkbox");
 const inputRange = document.querySelectorAll(".calculator__input")
 const merter = document.querySelectorAll(".calculator__meter");
 function range() {

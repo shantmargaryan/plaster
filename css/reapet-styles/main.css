@@ -22,6 +22,65 @@
 	visibility: visible;
 }
 
+.main__request-call {
+	position: fixed;
+	left: 0;
+	top: -100%;
+	z-index: 11;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 0 15px;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.8s, visibility 0.8s, top 0.8s;
+}
+
+.main__request-call_active {
+	top: 15%;
+	opacity: 1;
+	visibility: visible;
+}
+
+.main__form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 500px;
+	min-height: 300px;
+	padding: 15px;
+	border-radius: 15px;
+	background-color: #fff;
+	pointer-events: all;
+}
+
+.main__label {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 40px;
+	font-weight: 600;
+}
+
+.main__input {
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: rgba(37, 65, 82, 0.2)
+}
+
+.main__btn {
+	align-self: center;
+	max-width: 200px;
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 15px;
+	background-color: rgba(45, 166, 221, 0.5);
+}
+
 .main__calculator {
 	position: fixed;
 	left: calc(50% - 150px);

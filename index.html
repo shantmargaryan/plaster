@@ -86,6 +86,17 @@
 
    <main class="main">
       <div class="main__overlay"></div>
+      <div class="main__request-call">
+         <form class="main__form" method="post" enctype="multipart/form-data">
+            <label class="main__label">
+               введите номер
+               <input id="phone" class="main__input input-reset" type="tel" placeholder="введите номер" required>
+            </label>
+            <button class="main__btn button-reset" type="submit">
+               Оставить звонок
+            </button>
+         </form>
+      </div>
       <div class="main__calculator">
          <div class="main__output">
             <div data-previous-operand class="previous-operand"></div>
@@ -915,14 +926,14 @@
                            <span class="calculator__price-text">
                               За квадратный метр
                            </span>
-                           <span class="calculator__price">
+                           <span class="calculator__price" data-price-text>
                               650 руб.
                            </span>
                            <span class="calculator__price-text">
                               Общая стоимость работ
                            </span>
-                           <span class="calculator__price">
-                              130 000 руб.
+                           <span class="calculator__price" data-price>
+                              0
                            </span>
                            <button class="calculator__submit-button button-reset" type="submit">
                               Оставить заявку
@@ -1237,6 +1248,7 @@
       </div>
    </footer>
    <!-- footer end -->
+
 
    <script src="js/calculator.js"></script>
    <script src="js/tabs.js"></script>
