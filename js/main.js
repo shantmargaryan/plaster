@@ -178,3 +178,4 @@ deleteButton.addEventListener('click', () => {
     calculator.delete()
     calculator.updateDisplay()
 })
+

@@ -16,7 +16,7 @@ const counterObserver = new IntersectionObserver((entries) => {
                     if (startValue == endValue) {
                         clearInterval(counter)
                         numberValue.textContent = endValue
-                        lastNumberValue.textContent = "200+"
+                        lastNumberValue.textContent = endValue + "+"
                     }
                     counterObserver.unobserve(numberValue);
                 }, duration)
