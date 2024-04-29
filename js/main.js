@@ -117,7 +117,7 @@ if (document.querySelector(".tabs")) {
     })
 }
 const priceText = document.querySelector("[data-price-text]");
-const price = document.querySelectorAll("[data-price]");
+const price = document.querySelector("[data-price]");
 const chackbox = document.querySelectorAll(".calculator__checkbox");
 const inputRange = document.querySelectorAll(".calculator__input")
 const merter = document.querySelectorAll(".calculator__meter");
@@ -128,6 +128,13 @@ function range() {
             merter[1].textContent = inputRange[1].value + " mm"
         });
     }
+    chackbox[0].addEventListener("input", function (e) {
+        if (chackbox[0].checked) {
+            price.textContent = (inputRange[0].value * inputRange[1].value * 650).toFixed(0) + " руб."
+        } else {
+            price.textContent = "0"
+        }
+    })
 }
 
 range();
