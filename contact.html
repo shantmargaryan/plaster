@@ -84,6 +84,17 @@
 
     <main class="main">
         <div class="main__overlay"></div>
+        <div class="main__request-call">
+            <form class="main__form" method="post" enctype="multipart/form-data">
+                <label class="main__label">
+                    введите номер
+                    <input id="phone" class="main__input input-reset" type="tel" placeholder="введите номер" required>
+                </label>
+                <button class="main__btn button-reset" type="submit">
+                    Оставить звонок
+                </button>
+            </form>
+        </div>
         <div class="main__calculator">
             <div class="main__output">
                 <div data-previous-operand class="previous-operand"></div>
