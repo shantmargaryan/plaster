@@ -37,6 +37,7 @@ mediaQueryMinWidth_992.addEventListener("change", (e) => {
 
 if (document.querySelector(".hero__swiper") || document.querySelector(".materials__swiper") || document.querySelector(".gallery__swiper")) {
     let heroSwiper = new Swiper(".hero__swiper", {
+        spaceBetween: 20,
         pagination: {
             clickable: true,
             el: ".swiper-pagination",
