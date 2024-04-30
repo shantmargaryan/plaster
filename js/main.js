@@ -1,4 +1,6 @@
+// DOM Element start //
 const header = document.querySelector(".header");
+const headerScroll = document.createElement("div");
 const nav = document.querySelector(".nav");
 const burger = document.querySelector(".burger");
 const calc = document.querySelector(".main__calculator");
@@ -8,8 +10,9 @@ const sendForm = document.querySelector(".main__form");
 const formInput = document.querySelector(".main__input");
 const requestBtn = document.querySelector(".header__btn");
 const requestCall = document.querySelector(".main__request-call");
+// DOM Element end //
 
-
+// calculator start //
 document.addEventListener("click", (e) => {
     if (e.target.closest(".nav__Calculator")) {
         calc.classList.add("main__calculator_active");
@@ -17,7 +20,9 @@ document.addEventListener("click", (e) => {
     } else if (e.target.closest(".main__overlay")) {
         calc.classList.remove("main__calculator_active");
         overlay.classList.remove("main__overlay_active");
+        // calculator end //
 
+        // request start //
     }
     if (e.target.closest(".header__btn")) {
         requestCall.classList.add("main__request-call_active");
@@ -26,9 +31,10 @@ document.addEventListener("click", (e) => {
         requestCall.classList.remove("main__request-call_active");
         overlay.classList.remove("main__overlay_active");
     }
-})
+});
+// request end //
 
-
+// menu start //
 function menu() {
     let nav = document.querySelector(".nav");
     nav.classList.toggle("show");
@@ -39,7 +45,6 @@ function menu() {
     }
 }
 document.querySelector(".burger").addEventListener("click", menu);
-
 const mediaQueryMinWidth_992 = window.matchMedia('(min-width: 992px)');
 mediaQueryMinWidth_992.addEventListener("change", (e) => {
     if (e.matches) {
@@ -47,7 +52,9 @@ mediaQueryMinWidth_992.addEventListener("change", (e) => {
         document.querySelector(".main").style.paddingTop = "";
     }
 });
+// menu end //
 
+// swiper start //
 if (document.querySelector(".hero__swiper") || document.querySelector(".materials__swiper") || document.querySelector(".gallery__swiper")) {
     let heroSwiper = new Swiper(".hero__swiper", {
         spaceBetween: 20,
@@ -107,7 +114,9 @@ if (document.querySelector(".hero__swiper") || document.querySelector(".material
         },
     });
 }
+// swiper end //
 
+// tabs start //
 if (document.querySelector(".tabs")) {
     new Tabs('tab1', {
         firstTabActive: true,
@@ -116,6 +125,9 @@ if (document.querySelector(".tabs")) {
         },
     })
 }
+// tabs end //
+
+// calculator price start //
 const priceText = document.querySelector("[data-price-text]");
 const price = document.querySelector("[data-price]");
 const chackbox = document.querySelectorAll(".calculator__checkbox");
@@ -138,6 +150,7 @@ function range() {
 }
 
 range();
+// calculator price end //
 
 
 const numberButtons = document.querySelectorAll('[data-number]')

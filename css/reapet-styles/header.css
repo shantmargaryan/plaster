@@ -39,7 +39,12 @@
     color: #254152;
     font-weight: 600;
     border-radius: 999px;
-    background: rgba(45, 166, 221, 0.2);
+    background-color: rgba(45, 166, 221, 0.2);
+    transition: scale 0.5s;
+}
+
+.header__btn:active {
+    scale: 0.9;
 }
 
 .header__phone-num {
@@ -59,7 +64,7 @@
     fill: #2DA6DD;
 }
 
-@media(min-width:992px){
+@media(min-width:992px) {
     .header__container {
         flex-direction: column;
     }

@@ -394,7 +394,9 @@
     position: relative;
 }
 
-.materials__container {}
+.materials__container {
+    padding-bottom: 20px;
+}
 
 .materials__content {}
 
@@ -434,6 +436,7 @@
     display: flex;
     justify-content: center;
     gap: 40px;
+    padding: 10px 0;
 }
 
 .materials__item {

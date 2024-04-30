@@ -38,7 +38,12 @@
     color: #254152;
     font-weight: 600;
     border-radius: 999px;
-    background: #BCD249;
+    background-color: #BCD249;
+    transition: scale 0.5s;
+}
+
+.nav__Calculator:active {
+    scale: 0.9;
 }
 
 .nav__Calculator-icon {
