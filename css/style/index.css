@@ -864,6 +864,19 @@
     background-color: #254152;
 }
 
+.calculator__rub-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.calculator__rub {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
 .calculator__price-content {
     display: flex;
     flex-direction: column;
@@ -889,7 +902,6 @@
 }
 
 .calculator__price {
-    margin-bottom: 40px;
     font-size: 24px;
     font-weight: 600;
     color: #fff;

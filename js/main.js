@@ -67,6 +67,7 @@ if (document.querySelector(".hero__swiper") || document.querySelector(".material
         },
         mousewheel: true,
     });
+
     let materialsSwiper = new Swiper(".materials__swiper", {
         cssMode: true,
         spaceBetween: 20,
@@ -92,6 +93,7 @@ if (document.querySelector(".hero__swiper") || document.querySelector(".material
         mousewheel: true,
         keyboard: true,
     });
+
     let gallerySwiper = new Swiper(".gallery__swiper", {
         spaceBetween: 20,
         breakpoints: {
@@ -104,12 +106,12 @@ if (document.querySelector(".hero__swiper") || document.querySelector(".material
             992: {
                 slidesPerView: 4,
             },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '">' + (index + 1) + "</span>";
-                },
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class=' + className + '>' + (index + 1) + "</span>";
             },
         },
     });
@@ -137,12 +139,18 @@ function range() {
     for (let i = 0; i < inputRange.length; i++) {
         inputRange[i].addEventListener("input", function () {
             merter[0].textContent = inputRange[0].value + " m2"
-            merter[1].textContent = inputRange[1].value + " mm"
+            if (document.querySelectorAll(".calculator__input")[1]) {
+                merter[1].textContent = inputRange[1].value + " mm"
+            }
         });
     }
-    chackbox[0].addEventListener("input", function (e) {
+    chackbox[0]?.addEventListener("input", function (e) {
         if (chackbox[0].checked) {
-            price.textContent = (inputRange[0].value * inputRange[1].value * 650).toFixed(0) + " руб."
+            if (document.querySelectorAll(".calculator__input")[1]) {
+                price.textContent = (new Intl.NumberFormat("de-DE").format(inputRange[0].value * inputRange[1].value * 650))
+            } else {
+                price.textContent = (new Intl.NumberFormat("de-DE").format(inputRange[0].value * 650))
+            }
         } else {
             price.textContent = "0"
         }

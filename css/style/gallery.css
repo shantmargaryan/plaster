@@ -14,7 +14,10 @@
     max-width: 650px;
 }
 
-.gallery__swiper {}
+.swiper.gallery__swiper {
+    margin-bottom: 30px;
+    padding-bottom: 8%;
+}
 
 
 .swiper-wrapper {}
@@ -40,5 +43,20 @@
 }
 
 .swiper-pagination {}
+
+.swiper.gallery__swiper .swiper-pagination {
+    bottom: 0;
+}
+
+.swiper.gallery__swiper .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(243, 243, 243);
+    opacity: 1;
+}
+
+.swiper.gallery__swiper .swiper-pagination-bullet-active {
+    background-color:rgba(45, 166, 221, 0.2) ;
+}
 
 /* gallery end */
