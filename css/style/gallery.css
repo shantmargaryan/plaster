@@ -16,7 +16,7 @@
 
 .swiper.gallery__swiper {
     margin-bottom: 30px;
-    padding-bottom: 8%;
+    padding-bottom: 80px;
 }
 
 
@@ -49,14 +49,18 @@
 }
 
 .swiper.gallery__swiper .swiper-pagination-bullet {
-    width: 20px;
-    height: 20px;
-    background-color: rgb(243, 243, 243);
+    width: 30px;
+    height: 30px;
+    padding-top: 6px;
+    background-color: #E7F2F9;
+    font-weight: 400;
+    font-size: 14px;
     opacity: 1;
 }
 
 .swiper.gallery__swiper .swiper-pagination-bullet-active {
-    background-color:rgba(45, 166, 221, 0.2) ;
+    background-color: #2DA6DD;
+    color: #fff;
 }
 
 /* gallery end */
