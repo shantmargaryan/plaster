@@ -214,9 +214,10 @@
                         Просто оставьте свои контактные данные и наши специалисты проконсультируют вас по любому вопросу
                     </p>
                 </div>
-                <form class="consultation__form form" action="#">
-                    <input class="form__input input-reset" type="text" placeholder="Ваше имя" required>
-                    <input class="form__input input-reset" type="text" placeholder="Телефон" required>
+                <form class="consultation__form form" action="https://formsubmit.co/94c42cd438b6c00cd97a0a5e820417b4"
+                    method="post" enctype="multipart/form-data">
+                    <input class="form__input input-reset" name="text" type="text" placeholder="Ваше имя" required>
+                    <input class="form__input input-reset" name="tel" type="tel" placeholder="Телефон" required>
                     <button class="form__btn btn button-reset" type="submit">
                         Отправить
                     </button>
